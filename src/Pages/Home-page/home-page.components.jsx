@@ -29,7 +29,7 @@ const HomePage = () =>{
                     console.log("female grade11")
               } else if (gender === "Male" && yearLevel === "Grade12"){
                     setSchedule(Grade12Batch1)
-                    console.log("female grade12")
+                    console.log("male grade12")
               }else {
                     setSchedule(Grade12Batch2)
                     console.log("female grade12")
