@@ -38,7 +38,7 @@ const LoginPage = () => {
         onPasswordError()
       }else{
         setLoadingState(true)
-        loginFetch(loginEndpoint,input)
+        loginFetch("https://pit-api.herokuapp.com/login/",input)
       }
      
     }
