@@ -8,7 +8,7 @@ import Styles from "./dashboard.module.scss";
 import StudentIcon from "../../Assets/icons/student.svg"
 import ScheduletIcon from "../../Assets/icons/schedule.svg"
 import EnrollmentIcon from "../../Assets/icons/subjects.svg"
-import studentImg from "../../Assets/Andrew.jpg"
+import studentImg from "../../Assets/default_user.png"
 
 const Dashboard = () =>{
     const userData = useSelector(state => state.userData)

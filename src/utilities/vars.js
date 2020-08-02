@@ -4,6 +4,6 @@
 
 
 //FOR PRODUCTION
-export const loginEndpoint = "http://pit-api.herokuapp.com/login";
-export const enrollmentCodeEndpoint = "http://pit-api.herokuapp.com/enrollmentForm/"
+export const loginEndpoint = "https://pit-api.herokuapp.com/login";
+export const enrollmentCodeEndpoint = "https://pit-api.herokuapp.com/enrollmentForm/"
 export const enrollmentEndpoint = "https://pit-api.herokuapp.com/enrollmentForm/submitEnrollmentForm"

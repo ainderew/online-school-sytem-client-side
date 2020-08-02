@@ -3,7 +3,7 @@ import {useHistory} from "react-router-dom"
 import Styles from "./header.module.scss";
 
 import Logo from "../../Assets/logo.png"
-import StudentPhoto from "../../Assets/Andrew.jpg"
+import StudentPhoto from "../../Assets/default_user.jpg"
 
 const Header = () =>{
     let history = useHistory();
