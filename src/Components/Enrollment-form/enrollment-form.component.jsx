@@ -6,7 +6,7 @@ import {enrollmentEndpoint} from "../../utilities/vars"
 import Illustration from "../../Assets/enrollment-illustration.svg";
 
 
-const EnrollmentForm = () =>{
+const EnrollmentForm = ({setLoading}) =>{
     const history = useHistory();
     const [inputs, setInputs] = useState({
         name: "",
@@ -46,6 +46,8 @@ const EnrollmentForm = () =>{
     
     const submit = (e) =>{
         e.preventDefault();
+        setLoading()
+        
         fetch(enrollmentEndpoint, {
             method: "POST",
             mode: "cors",

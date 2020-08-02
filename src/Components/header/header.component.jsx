@@ -1,12 +1,16 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
+import {useSelector} from "react-redux"
 import Styles from "./header.module.scss";
+import {nameHandler} from "../../utilities/index"
 
 import Logo from "../../Assets/logo.png"
 import StudentPhoto from "../../Assets/default_user.jpg"
 
 const Header = () =>{
     let history = useHistory();
+    const userData = useSelector(state => state.userData)
+    const {name} = userData
     return(
         <header className={Styles.header}>
             <div className={Styles.headerInner}>
@@ -25,7 +29,7 @@ const Header = () =>{
                 </div>
                 <div className={Styles.row3}>
                     {/* <div className={Styles.row3inner}> */}
-                        <h2 className={Styles.name}>Andrew P</h2>
+                        <h2 className={Styles.name}>{nameHandler(name)}</h2>
                         <img src={StudentPhoto} alt="" className={Styles.studentImg}/>
                     {/* </div> */}
                 </div>
