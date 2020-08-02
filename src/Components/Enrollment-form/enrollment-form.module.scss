@@ -1,4 +1,7 @@
 @import "../../scss_variables/colors";
+.blur{
+    filter: blur(5px);
+}
 .container{
     width: 90%;
     height: 80%;

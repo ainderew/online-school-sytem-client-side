@@ -20,6 +20,7 @@ const EnrollmentForm = ({setLoading}) =>{
         guardianPhoneNumber: "",
         gender: ""
     })
+    const [blurLoading, setBlurLoading] = useState(false)
     
     const onInput = (e) =>{
         setInputs({
@@ -47,6 +48,7 @@ const EnrollmentForm = ({setLoading}) =>{
     const submit = (e) =>{
         e.preventDefault();
         setLoading()
+        setBlurLoading(true)
         
         fetch(enrollmentEndpoint, {
             method: "POST",
@@ -69,7 +71,7 @@ const EnrollmentForm = ({setLoading}) =>{
     }
     
     return(
-        <div className={Styles.container}>
+        <div  className={(blurLoading) ? `${Styles.container} ${Styles.blur}`  : Styles.container}>
             <div className={Styles.left}>
                 <img src={Illustration} alt="Online Classes" className={Styles.img}/>
             </div>
