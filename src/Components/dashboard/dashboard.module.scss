@@ -170,15 +170,15 @@
     .row1{
         width: 100%;
         // height: auto;
-        height: 35%;
+        height: 30%;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
         // justify-content: space-evenly;
         .studentImg{
-            width: 130px;
-            height: 110px;
+            width: 110px;
+            height: 90px;
             border: 3px solid #ffff;
         }
         
@@ -194,7 +194,7 @@
     }
     
     .row2{
-        height: 30%;
+        height: 35%;
         // height: auto;
         width: 100%;
         padding: 0 .5rem;
@@ -212,7 +212,7 @@
         .li{
             list-style-type: none;
             color: #000;
-            margin-bottom: 1rem;
+            margin-bottom: 0rem;
         }
     }
     
@@ -227,8 +227,8 @@
         .ul2{
             display: flex;
             flex-direction: column;
-            // height: 100%;
-            height: auto;
+            height: 100%;
+            // height: auto;
         }
         .li2{
             flex: 1;
