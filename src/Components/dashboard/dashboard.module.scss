@@ -126,8 +126,9 @@
         position: fixed;
         left: 0rem;
         border-right: 1px solid #DFDFDF;
-        // background: #F8F8FF;
-        background: #ff2;
+        background: #F8F8FF;
+        // background: #ff2;
+        
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -157,7 +158,7 @@
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         // border: 1px solid red;
     }
     
