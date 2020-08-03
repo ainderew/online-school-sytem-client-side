@@ -35,7 +35,7 @@
 
     .form{
         width: 30vw;
-        height: 50vh;
+        height: 45vh;
         position: relative;
         background: #fff;
         display: flex;
@@ -145,6 +145,7 @@
     
     .row2{
         width: 100%;
+        min-width: 50vh;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -152,7 +153,8 @@
     
         .form{
             width: 90%;
-            height: 50vh;
+            min-height: 50vh;
+            max-height: 50vh;
             position: relative;
             background: #fff;
             display: flex;
