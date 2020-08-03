@@ -119,16 +119,33 @@
 }
 
 @media only screen and (max-width: 900px){
+    .dashboardIn{
+        width: 13rem;
+        height: 100%;
+        position: fixed;
+        left: 0rem;
+        border-right: 1px solid #DFDFDF;
+        background: #F8F8FF;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        animation: slideIn 200ms  linear forwards;
+        z-index: 9
+    }
+    
     .dashboard{
         // display: none;
         width: 13rem;
         height: 100%;
         position: fixed;
         left: -20rem;
+        
         border-right: 1px solid #DFDFDF;
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        background: white;
+        animation: slideOut 200ms  linear forwards;
         
     }
     
@@ -241,4 +258,24 @@
             font-size: .7rem;
         }
     }
+    
+    
+}
+
+@keyframes slideIn{
+    0%{
+        left: -20rem;
+    }
+    100%{
+        left: 0rem;
+    }
+}
+@keyframes slideOut{
+    0%{
+        left: 0rem;
+    }
+    100%{
+        left: -20rem;
+    }
+    
 }

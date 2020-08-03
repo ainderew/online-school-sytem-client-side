@@ -12,12 +12,13 @@ import studentImg from "../../Assets/default_user.png"
 
 const Dashboard = () =>{
     const userData = useSelector(state => state.userData)
+    const dashBoardState = useSelector(state => state.dashboardState)
     const {name, email, guardianName, phoneNumber} = userData
     
-    
+    console.log(dashBoardState)
     nameHandler(name)
     return(
-        <div className={Styles.dashboard}>
+        <div className={dashBoardState ? Styles.dashboardIn : Styles.dashboard}>
             <div className={Styles.inner}>
                 <div className={Styles.row1}>
                     <img src={studentImg} alt="" className={Styles.studentImg}/>

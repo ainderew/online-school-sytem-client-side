@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
 import "../../scss_variables/global.styles.scss";
 
 //COMPONENTS
@@ -14,7 +14,10 @@ import PhoneHeader from "../../Components/header-phone/header-phone.component";
 
 const MainContainer = () => {
   const userData = useSelector(state => state.userData)
+  
   console.log(Object.entries(userData).length)
+  
+ 
   return (
     <Router>
       {/* <div className="Main-container"> */}

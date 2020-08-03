@@ -1,3 +1,6 @@
+
+
+
 .dashboard{
     width: 13rem;
     height: calc(100vh - 5rem);
@@ -119,6 +122,18 @@
 }
 
 @media only screen and (max-width: 900px){
+    .dashboardIn{
+        width: 13rem;
+        height: 100%;
+        position: fixed;
+        left: 0rem;
+        border-right: 1px solid #DFDFDF;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        animation: 200ms slideIn linear forwards;
+    }
+    
     .dashboard{
         // display: none;
         width: 13rem;
@@ -240,5 +255,15 @@
         .infoP{
             font-size: .7rem;
         }
+    }
+}
+
+
+@keyframes slideIn{
+    0%{
+        left: -20rem;
+    }
+    100%{
+        left: 0rem;
     }
 }

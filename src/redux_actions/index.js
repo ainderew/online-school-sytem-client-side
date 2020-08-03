@@ -9,3 +9,9 @@ export const clearDataAction = (userData) =>{
         type: "clearUserData"
     }
 }
+export const toggleDashboardAction = (dashboardState) =>{
+    return{
+        type: "toggleDashboard",
+        state: dashboardState
+    }
+}
