@@ -3,11 +3,13 @@ import Styles from "./enrollment-code-form.module.scss";
 import {enrollmentCodeEndpoint} from "../../utilities/vars";
 //IMAGES
 import Logo from "../../Assets/logo.png"
-
+import Loading from "../../Assets/loading/loading.svg"
 
 const EnrollmentCodeForm = ({setConfirmationStatus}) =>{
     let codeInput = useRef(null)
     const [enrollmentCode, setEnrollmentCode] = useState("")
+    const [blurLoading, setBlurLoading] = useState(false)
+    
 
     //FUNCTIONS
     const enrollmentCodeInput = (e) =>{
@@ -15,7 +17,7 @@ const EnrollmentCodeForm = ({setConfirmationStatus}) =>{
     }
     const submitCode = async (e) =>{
         e.preventDefault();
-        
+        setBlurLoading(true)
         const obj ={
             enrollmentCode: enrollmentCode
         }
@@ -41,7 +43,12 @@ const EnrollmentCodeForm = ({setConfirmationStatus}) =>{
     
     return(
         <React.Fragment>
-            <form className={Styles.enrollmentCode}>
+            {/* <form className={Styles.enrollmentCode}> */}
+            {blurLoading ? (<div className={Styles.loadingContainer}>
+                <img src={Loading} alt="loading" className={Styles.loading}/> 
+            </div>) : null}
+            
+            <form className={(blurLoading) ? `${Styles.enrollmentCode} ${Styles.blur}`  : Styles.enrollmentCode}>
                <div className={Styles.logoContainer}>
                    <img src={Logo} alt="PIT logo" className={Styles.logo}/>
                </div>
