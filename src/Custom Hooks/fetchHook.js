@@ -42,8 +42,43 @@ const useLoginFetch = () => {
         }
       });
   };
+  
+  // FOR TEACHER LOGIN
+  
+  const teacherLoginFetch = (loginEndpoint, obj) => {
+    fetch(loginEndpoint, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "Application/json",
+      },
+      body: JSON.stringify(obj),
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === "success") {
+          //successs
+          dispatch(userDataAction(data.data));
+          history.push("/teacherHome");
+        } else if (data.status === "id number failed") {
+          //wrong id number
+          setData({
+            status: data.status,
+            counter: Math.random()
+          });
+        } else if (data.status === "failed") {
+          //wrong password
+          setData({
+            status: data.status,
+            counter: Math.random()
+          });
+        }
+      });
+  };
+  
   return {
     loginFetch,
+    teacherLoginFetch,
     data,
   };
 };

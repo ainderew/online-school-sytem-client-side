@@ -22,10 +22,10 @@ const Header = () =>{
                     </div>
                 </div>
                 <div className={Styles.row2}>
-                    <ul className={Styles.ul}>
+                    {/* <ul className={Styles.ul}>
                             <li onClick={()=>history.push("/home")} className={Styles.li}>Home</li>
                             <li onClick={()=>history.push("/home")} className={Styles.li}>Announcements</li>
-                    </ul>
+                    </ul> */}
                 </div>
                 <div className={Styles.row3}>
                     {/* <div className={Styles.row3inner}> */}
