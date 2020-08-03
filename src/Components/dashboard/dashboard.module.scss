@@ -120,7 +120,7 @@
 
 @media only screen and (max-width: 900px){
     .dashboardIn{
-        width: 13rem;
+        width: 100vw;
         min-height: 100vh;
         height: 100%;
         position: fixed;
@@ -136,7 +136,7 @@
     
     .dashboard{
         // display: none;
-        width: 13rem;
+        width: 20rem;
         height: 100%;
         position: fixed;
         left: -20rem;
