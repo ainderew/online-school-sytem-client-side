@@ -121,7 +121,7 @@
 @media only screen and (max-width: 900px){
     .dashboardIn{
         width: 100vw;
-        // min-height: 100vh;
+        min-height: 100vh;
         height: 100%;
         position: fixed;
         left: 0rem;
@@ -233,6 +233,7 @@
         .li2{
             flex: 1;
             list-style-type: none;
+            
         }
         
         .contactContainer,
